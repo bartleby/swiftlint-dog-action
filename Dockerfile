@@ -11,4 +11,4 @@ RUN curl -sSLO https://github.com/realm/SwiftLint/releases/download/0.39.2/porta
 
 COPY entrypoint.sh /user/local/entrypoint.sh
 RUN chmod +x /user/local/entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/user/local/entrypoint.sh"]
