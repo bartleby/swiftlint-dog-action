@@ -1,6 +1,6 @@
 FROM alpine:3.11
 
-RUN --no-cache --update add git curl
+RUN --update add git curl
 
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /usr/local/bin/
 
