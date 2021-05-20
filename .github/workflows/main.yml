@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  swift_lint_job:
+    runs-on: ubuntu-latest
+    name: A job runing swiftlint and reviewdog
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: swiftlint step
+        uses: ./ # Uses an action in the root directory
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "Completed"
